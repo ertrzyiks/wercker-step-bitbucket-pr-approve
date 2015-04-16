@@ -1,0 +1,14 @@
+name: bitbucket-find-pull-request-id
+version: 0.0.1
+description: Find bitbucket pull requests id
+keywords:
+  - pull
+  - requests
+  - bitbucket
+properties:
+  password:
+    type: string
+    required: false
+  username:
+    type: string
+    required: true
