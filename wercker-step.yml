@@ -1,10 +1,11 @@
-name: bitbucket-find-pull-request-id
-version: 0.0.1
-description: Find bitbucket pull requests id
+name: bitbucket-pr-approve
+version: 0.0.2
+description: Approve bitbucket pull request on successful build
 keywords:
   - pull
   - requests
   - bitbucket
+  - approve
 properties:
   password:
     type: string
