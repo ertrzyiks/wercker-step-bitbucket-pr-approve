@@ -11,6 +11,13 @@ if [ -n "$DEPLOY" ]; then
   fail 'Should be used for build steps'
 fi
 
+if ! [ -z "$WERCKER_BITBUCKET_PR_APPROVE_EXCLUDE" ]; then
+  if [[ "$WERCKER_GIT_BRANCH" =~ $WERCKER_BITBUCKET_PR_APPROVE_EXCLUDE ]]; then
+    echo "Branch '$WERCKER_GIT_BRANCH' match to exclude filter '$WERCKER_BITBUCKET_PR_APPROVE_EXCLUDE'";
+    exit;
+  fi
+fi
+
 function verifyResult {
   if [ "$RESULT" = "401" ]; then
     fail "Invalid username or password"

@@ -3,14 +3,15 @@ Approve [bitbucket](http://bitbucket.com) pull request or commit on successful b
 
 Based on https://github.com/hyzhak/wercker-step-bitbucket-approve
 
-### Required fields
+### Options
 
 * `username` - user name of account which will be wercker bot and will approve commit. (for example: '<owner>-wercker').
 * `password` - password of bot user.
+* `exclude` - regular expression tested on branch name, step finishing without error on match (optional)
 
 ### How to configure?
 
-You should create additional account for wercker bot. And give him permition for reading target repo.
+You should create additional account for wercker bot. And give him permission for reading target repo.
 
 # Example
 
@@ -19,6 +20,7 @@ You should create additional account for wercker bot. And give him permition for
             - ertrzyiks/bitbucket-pr-approve:
                 username: my-application-wercker
                 password: $WERCKER_BITBUCKET_USER_PASSWORD
+                exclude: ^(master|dist)$
 
 # License
 
