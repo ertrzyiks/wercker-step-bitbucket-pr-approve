@@ -1,5 +1,5 @@
 name: bitbucket-pr-approve
-version: 0.0.3
+version: 0.0.4
 description: Approve bitbucket pull request on successful build
 keywords:
   - pull

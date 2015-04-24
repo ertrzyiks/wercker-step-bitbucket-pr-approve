@@ -14,7 +14,7 @@ fi
 if ! [ -z "$WERCKER_BITBUCKET_PR_APPROVE_EXCLUDE" ]; then
   if [[ "$WERCKER_GIT_BRANCH" =~ $WERCKER_BITBUCKET_PR_APPROVE_EXCLUDE ]]; then
     echo "Branch '$WERCKER_GIT_BRANCH' match to exclude filter '$WERCKER_BITBUCKET_PR_APPROVE_EXCLUDE'";
-    exit;
+    return 0;
   fi
 fi
 

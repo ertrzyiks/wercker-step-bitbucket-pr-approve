@@ -7,7 +7,7 @@ Based on https://github.com/hyzhak/wercker-step-bitbucket-approve
 
 * `username` - user name of account which will be wercker bot and will approve commit. (for example: '<owner>-wercker').
 * `password` - password of bot user.
-* `exclude` - regular expression tested on branch name, step finishing without error on match (optional)
+* `exclude` - regular expression tested on branch name, step is finished without error on match (optional)
 
 ### How to configure?
 
@@ -46,6 +46,12 @@ IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 # Changelog
+
+## 0.0.4
+- fix exiting from step with error on exclude match
+
+## 0.0.3
+- add exclude option
 
 ## 0.0.2
 - initial version
